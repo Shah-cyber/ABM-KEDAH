@@ -1,0 +1,8 @@
+1. Buka XAMPP.
+2. Make sure Apache and MySQL 'start'.
+3. Tekan button 'Admin' kat MySQL.
+4. create database baru 'abmkedah'.
+5. Then refresh, pastu tekan abmkedah db, importkan.
+6.(Optional) If step 5 xdpat, buka directly file sql tu, copy semua query and paste kt
+query database abmkedah pstu execute.
+7.Done

@@ -1,0 +1,1053 @@
+:root {
+    --sidebar-title-font: 'Kanit', sans-serif; /* Define a custom variable for the font */
+    --sidebar-navigation-font: 'Montserrat', sans-serif; /* Define a custom variable for the font */
+  }
+
+/* Custom CSS for Sidebar */
+
+
+header {
+    width: calc(100% - 250px); /* Adjust header width */
+    margin-left: 250px; /* Ensure header starts after sidebar */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .notification-wrapper {
+    padding: 10px;
+    margin-right: auto;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+header .notification-wrapper:hover {
+    background-color: #ccc;
+}
+
+
+header .adminsidebarmenu-wrapper {
+    margin-right: 10px;
+    padding: 10px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+header .adminsidebarmenu-wrapper:hover {
+    background-color: #ccc;
+}
+
+header .adminprofile-wrapper {
+    margin-left: auto;
+    display: flex;
+}
+
+header .nametitle-wrapper{
+    font-size: clamp(0.7rem, 0.5vw + 0.3rem, 2rem);
+    text-align: center;
+    margin: auto 10px;
+    font-family: var(--sidebar-title-font);
+    display: flex;
+    flex-direction: column;
+}
+
+header .circle {
+    width: 50px; /* Adjust circle size */
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header .circle img {
+    width: 100%;
+    height: auto;
+}
+
+header .circle{
+    object-fit: cover;
+    cursor: pointer;
+    background-color: #F6AE2D;
+    transition: background-color 0.2s ease;
+}
+
+header .circle:hover{
+    background-color: #F8BD4F;
+}
+
+
+.sidebar {
+    background-color: white;
+    font-family: var(--sidebar-font);
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-right: 1px solid #ccc;
+    z-index: 1000;
+    overflow-y: auto; /* Optional: Adds a scrollbar if the content overflows */
+}
+
+
+.sidebar-close {
+    font-family: var(--sidebar-title-font);
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: clamp(1.2rem, 0.5vw + 0.4rem, 2rem);
+    cursor: pointer;
+    z-index: 1001; /* Make sure it stays on top */
+    transition: background-color 0.2s ease;
+}
+
+.sidebar-close:hover{
+    background-color: #ccc;
+}
+
+.sidebar .logo {
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+}
+
+.sidebar .logo img {
+    width: 70px;
+    height: auto;
+}
+
+.sidebar .logo span {
+    font-size: clamp(0.7rem, 0.5vw + 0.4rem, 2rem);
+    font-family: var(--sidebar-title-font);
+    margin: auto 10px;
+    
+}
+
+
+.navigation-header{
+    font-size: clamp(0.6rem, 0.5vw + 0.4rem, 1.8rem);
+    font-family: var(--sidebar-title-font);
+    padding: 10px;
+
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+}
+
+.sidebar ul li {
+    width: 100%;
+}
+
+.sidebar ul li a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    text-decoration: none;
+    color: #1F1F1F;
+    font-family: var(--sidebar-navigation-font);
+    font-size: clamp(0.8rem, 0.5vw + 0.5rem, 2rem);
+    border-radius: 10px;
+    width: 100%;
+}
+
+.sidebar ul li a:hover {
+    background-color: #E1F8DD;
+    color: #5BD945;
+}
+
+
+.sidebar ul li a img.dropdown-icon {
+    width: 16px;
+    height: 16px;
+    margin-left: auto;
+    opacity: 0; /* Hide the icon by default */
+    transform: rotate(-90deg);
+    transition: opacity 0.3s, transform 0.3s; /* Add transition for smooth effect */
+}
+
+.sidebar ul li a:hover img.dropdown-icon {
+    opacity: 1; /* Show the icon on hover */
+}
+
+
+
+.sidebar ul li a:hover {
+    background-color: #E1F8DD;
+    color: #5BD945;
+}
+
+
+
+
+.sidebar ul li .dropdown-content {
+    opacity: 0; /* Start with opacity 0 to hide the dropdown */
+    display: none; /* Hide the dropdown content initially */
+    border-radius: 8px;
+    z-index: 1000;
+    transition: opacity 0.3s ease; /* Add transition for smooth fade-in effect */
+}
+
+.sidebar ul li .dropdown-content.show {
+    display: block; /* Show the dropdown content */
+    opacity: 1; /* Set opacity to 1 to reveal the dropdown */
+}
+
+.sidebar ul li .dropdown-content li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.sidebar ul li .dropdown-content li:last-child {
+    border-bottom: none;
+}
+
+.sidebar ul li .dropdown-content li a {
+    text-decoration: none;
+    color: #1F1F1F;
+    display: block;
+    font-size: clamp(0.6rem, 0.5vw + 0.3rem, 1.7rem);
+}
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .sidebar {
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+    }
+
+    .sidebar-close {
+        display: block;
+    }
+
+    header {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .adminsidebarmenu-wrapper {
+        display: block !important;
+    }
+}
+
+@media (max-width: 427px){
+    .sidebar{
+        width:100%;
+    }
+}
+
+
+
+
+.profile-popup {
+    font-family: var(--sidebar-navigation-font);
+    display: none;
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    padding: 10px;
+    font-weight: 500;
+}
+
+.profile-popup.show {
+    display: block;
+    opacity: 1;
+}
+
+.profile-popup ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.profile-popup ul li {
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+}
+
+.profile-popup ul .profilepopup-options {
+    font-size: clamp(0.8rem, 0.5vw + 0.5rem, 2rem);
+    display: block;
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+    border-radius: 7px;
+}
+
+.profile-popup .profilepopup-options:hover {
+    background-color: #f5f5f5;
+}
+
+.profile-popup ul li:last-child {
+    border-bottom: none;
+}
+
+
+.profile-popup img{
+    height: auto;
+    width: 27px;
+    padding-right: 3px;
+}
+
+.profile-popup .signoutlist{
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.signoutbtn{
+    color: inherit;
+    text-align: center;
+    border-radius: 50px;
+    padding: 12px 15px;
+    background-color: #F8BD4F;
+    transition: background-color 0.2s ease;
+}
+
+.signoutbtn:hover{
+    background-color: #F8C462;
+}
+
+.content-wrapper {
+    padding-left: 16rem;
+    transition: padding-left 0.3s;
+}
+
+@media (max-width: 769px) {
+    .content-wrapper {
+        padding-left: 0;
+    }
+}
+
+.title-line-break {
+    border: 1.5px solid black; /* Adjust color as needed */
+    width: 100%; /* Ensures line spans the full width */
+    margin: 15px 0; /* Adds some spacing above and below */
+  }
+
+.content-title{
+    font-family: var(--sidebar-navigation-font);
+}
+
+
+@media (max-width: 450px) {
+    .content-title {
+        text-align: center;
+    }
+}
+
+
+  .content-wrapper a{
+    margin-right: 10px;
+  }
+
+
+
+
+  .addmemberbtn{
+    font-family: var(--sidebar-title-font);
+    text-decoration: none;
+    color: inherit;
+    background-color: #F6AE2D;
+    border-radius: 2px;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+
+  }
+
+  .addmemberbtn:hover{
+    background-color: #F8BD4F ;
+  }
+
+  .addmemberbtn img{
+    width: 20px;
+    height: auto;
+    margin-right: 5px;
+  }
+
+  .exportmemberlistbtn{
+    font-family: var(--sidebar-title-font);
+    text-decoration: none;
+    color: inherit;
+    background-color: #F6AE2D;
+    border-radius: 2px;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+  }
+
+  .exportmemberlistbtn:hover{
+    background-color: #F8BD4F ;
+  }
+
+  .exportmemberlistbtn img{
+    width: 20px;
+    height: auto;
+    margin-right: 5px;
+  }
+
+
+  .memberdisplay-wrapper{
+    display: flex;
+    justify-content: center;
+  }
+
+
+
+  .member-display {
+    font-family: var(--sidebar-navigation-font);
+    display: inline-flex;  /* Enables horizontal arrangement */
+    align-items: center;  /* Centers content vertically */
+    border: 1px solid #ddd;  /* Adds a light gray border */
+    padding: 6px 15px;  /* Adds some padding for spacing */
+    margin-top: -7px;
+    background-color: #5BD945;  /* Optional background color */
+    border-radius: 3px;
+  }
+  
+  .total-title {
+    font-size: clamp(1rem, 0.5vw + 0.3rem, 2rem);
+    font-weight: 500;
+    margin-right: 10px;  /* Adds some space between title and counter */
+  }
+
+  .total-counter{
+    font-size: clamp(1rem, 0.5vw + 0.5rem, 2rem);
+  }
+
+  .searchbarbtn{
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .searchbarbtn:hover{
+    background-color: #F3F5F7;
+  }
+
+  .searchbaricon{
+    width: 20px;
+    height: auto;
+    margin-right: 5px;
+  }
+
+
+
+  .paging-container {
+    font-family: var(--sidebar-title-font);
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centers the items horizontally */
+
+  }
+  
+  .paging-item {
+    display: inline-block; /* Makes items behave like inline elements */
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px; /* Adds rounded corners */
+    margin: 0 5px; /* Adds some space between items */
+    cursor: pointer; /* Indicates clickability */
+  }
+  
+  .paging-item.active {
+    background-color: #eee; /* Styles the active page number */
+  }
+
+
+  /* Style the table */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: left;
+}
+
+/* Style the table header */
+.table thead th {
+    background-color: #f2f2f2;
+    color: #333;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+}
+
+/* Style the table body */
+.table tbody tr {
+    border-bottom: 1px solid #ddd;
+}
+
+/* Style the table body cells */
+.table tbody td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+}
+
+/* Alternate row colors */
+.table tbody tr:nth-of-type(even) {
+    background-color: #f9f9f9;
+}
+
+/* Hover effect for rows */
+.table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Style the action buttons */
+.table tbody td button {
+    display: block;
+    width: 100%;
+    padding: 4px 8px;
+    margin: 5px auto;
+    border: none;
+    border-radius: 4px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+}
+
+.table tbody td button:hover {
+    background-color: #45a049;
+}
+
+.table tbody td button:focus {
+    outline: none;
+}
+
+.no-record-message{
+    font-size: clamp(0.7rem, 0.5vw + 0.5rem, 2rem);
+    font-family: var(--sidebar-navigation-font);
+}
+
+
+
+/* Add Members*/
+
+.redirectbackbtn-wrapper{
+    cursor: pointer;
+    display: inline-block;
+}
+
+.redirectbackbtn-wrapper .circle{
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.2s ease;
+}
+
+.redirectbackbtn-wrapper .circle:hover{
+    background-color: #ccc;
+}
+
+
+
+.redirectbackbtn-wrapper .circle img{
+    height: auto;
+    width: 25px;
+    transition: transform 0.3s ease;
+}
+
+
+.redirectbackbtn-wrapper:hover .circle img {
+    transform: translateX(-3px);
+  }
+
+
+  .addmembersubmitbtn {
+    font-family: var(--sidebar-title-font);
+    border: none;
+    background-color: #1F1F1F;
+    color: white;
+    padding: 13px 20px;
+    border-radius: 50px;
+    transition: opacity 0.5s ease; /* Transition property */
+}
+
+.addmembersubmitbtn:disabled {
+    background-color: #cccccc; /* Light grey background for disabled state */
+    color: #666666; /* Darker grey text color for disabled state */
+    opacity: 0.6; /* Lower opacity for disabled state */
+}
+
+.addmembersubmitbtn:disabled:hover {
+    background-color: #cccccc; /* Light grey background for disabled state */
+    color: #666666; /* Darker grey text color for disabled state */
+    opacity: 0.6; /* Lower opacity for disabled state */
+}
+
+.addmembersubmitbtn:not(:disabled):hover{
+    background-color: #333333;
+}
+
+
+
+/*Member Information*/
+
+.memberinformationgeneratebtn-wrapper{
+    display: flex;
+    justify-content: end;
+}
+
+.memberinformationgeneratebtn{
+    font-family: var(--sidebar-title-font);
+    padding: 10px;
+    background-color: #F6AE2D;
+    border: none;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+}
+
+.memberinformationgeneratebtn:hover{
+    background-color: #F8BD4F;
+}
+
+@media (max-width: 450px) {
+    .memberinformationgeneratebtn-wrapper {
+        justify-content: center;
+    }
+}
+
+
+
+        /* Overlay */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 9000;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.5s, visibility 0.5s;
+        }
+
+        .overlay.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* PDF Container */
+        .pdf-container {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: transparent;
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+            height: 80%;
+   
+        }
+
+        .pdf-header {
+            display: flex;
+            justify-content: flex-end;
+            padding: 10px;
+            background: #f1f1f1;
+        }
+
+        .close-btn {
+            font-size: 24px;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .pdf-viewer {
+            background-color: white;
+            flex: 1;
+            padding: 10px;
+            height: 100%;
+            width: 100%;
+
+        }
+
+        iframe {
+            border: none;
+            height: 100%;
+            width: 100%;
+        }
+
+
+
+
+.memberinformation-wrapper{
+    margin-top: -30px;
+    font-family: var(--sidebar-title-font);
+}
+
+.sessiontotalmerit-wrapper{
+    font-family: var(--sidebar-title-font);
+}
+
+
+
+.generateachievementbtn-wrapper{
+    display: flex;
+    justify-content: end;
+}
+
+
+.generateachievementbtn{
+    font-family: var(--sidebar-title-font);
+    padding: 10px;
+    background-color: #F6AE2D;
+    border: none;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+}
+
+.generateachievementbtn:hover{
+    background-color: #F8BD4F;
+}
+
+@media (max-width: 450px) {
+    .generateachievementbtn-wrapper {
+        justify-content: center;
+    }
+}
+
+/* dashboard */
+
+.dashboard-title {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.dashboard-boxes {
+    border: 1px solid #000;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 5px;
+    background-color: #ffffff;
+    box-shadow: #f1f1f1;
+}
+
+.box {
+    border: 2px solid #000;
+    padding: 20px;
+    width: 25%;
+    border-radius: 5px;
+    background-color: #F9F6EE;
+}
+
+.box img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.box p {
+    margin: 5px 0;
+}
+
+.amount {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
+/* Activity List Record */
+
+.addactivitybtn{
+    font-family: var(--sidebar-title-font);
+    text-decoration: none;
+    color: inherit;
+    background-color: #F6AE2D;
+    border-radius: 2px;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+    font-size: clamp(0.7rem,1vw + 0.3rem ,5rem);
+  }
+
+
+
+  .addactivitybtn:hover{
+    background-color: #F8BD4F ;
+  }
+
+  .addactivitybtn img{
+    width: 21px;
+    height: auto;
+    margin-right: 5px;
+  }
+
+
+  /* [class*="col"] {
+    border: 2px solid #ccc;
+} */
+
+
+/* Merit List  */
+
+.addmeritbtn {
+    font-family: var(--sidebar-title-font);
+    text-decoration: none;
+    color: inherit;
+    background-color: #F6AE2D;
+    border-radius: 2px;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+    font-size: clamp(0.7rem,1vw + 0.3rem ,5rem);
+}
+
+.addmeritbtn:hover {
+    background-color: #F8BD4F;
+}
+
+.addmeritbtn img {
+    width: 21px;
+    height: auto;
+    margin-right: 5px;
+}
+
+/* pdf.png icon */
+.generatePdfbtn {
+    font-family: var(--sidebar-title-font);
+    text-decoration: none;
+    color: inherit;
+    background-color: #F6AE2D;
+    border-radius: 2px;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+    font-size: clamp(0.7rem,1vw + 0.3rem ,5rem);
+
+}
+
+.generatePdfbtn:hover {
+    background-color: #F8BD4F;
+}
+
+.generatePdfbtn img {
+    width: 21px;
+    height: auto;
+    margin-right: 5px;
+}
+
+/* activity report table  */
+
+.table-borderless td, .table-borderless th {
+    border: 1px solid #000;
+}
+
+
+.total-active-activity{
+    text-align: end;
+}
+
+@media (max-width: 450px) {
+    .total-active-activity{
+        text-align: center;
+    }
+}
+
+.activeactivity{
+    background-color: #E7ECEE;
+    padding: 18px;
+    border-radius: 8px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+    margin: 40px 0;
+}
+
+.banner-container .rounded-square{
+    object-fit: cover;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.banner-container .rounded-square img{
+    height: auto;
+    width: 100%;
+}
+
+.activeactivity-information h4{
+    font-family: var(--sidebar-title-font);
+    font-weight: 500;
+}
+
+.activeactivity-information p{
+    font-family: var(--sidebar-navigation-font);
+    font-weight: 500;
+}
+
+
+.activeactivity-redirect-wrapper{
+    text-align: end;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+.activeactivity-redirect-wrapper a{
+    padding: 13px 20px;
+    background-color: #5BD945;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    color: inherit;
+    transition: background-color 0.2s ease-in;
+}
+
+.activeactivity-redirect-wrapper a:hover{
+    background-color: #6ADC56;
+}
+
+
+@media (max-width: 770px) {
+    .banner-container{
+        display: flex;
+        justify-content: center;
+    }
+
+
+    .activeactivity-information{
+        margin-top: 15px;
+        text-align: center;
+    }
+
+    .activeactivity-redirect-wrapper{
+        text-align: center;
+    }
+}
+
+.eventbannerinfo-wrapper{
+    object-fit: cover;
+    width: 100%;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+    background-color: #cccccc;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.eventbannerinfo-wrapper img{
+    width: 100%;
+}
+
+
+.eventinformation-wrapper{
+    background-color: whitesmoke;
+    padding: 8px;
+    border-radius: 8px;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0.1, 0.1);
+}
+
+.eventinformation-wrapper h6{
+    font-family: var(--sidebar-title-font);
+    font-weight: bold;
+}
+
+.registeractiveeventbtn{
+    border: none;
+    background-color: #1F1F1F;
+    color: white;
+    padding: 13px 20px;
+    border-radius: 50px;
+    transition: background-color 0.2s ease-in;
+    font-weight: 500;
+}
+
+.registeractiveeventbtn:hover{
+    background-color: #292929;
+}
+
+
+.billingform-container{
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0.1, 0.1);
+    
+}
+
+.billingform-container h1{
+    font-family: var(--sidebar-title-font);
+}
+
+.billingform-container span{
+    font-family: var(--sidebar-navigation-font);
+    color: #999999;
+}
+
+.downloadreceiptbtn-wrapper{
+    text-align: end;
+}
+
+@media (max-width: 1030px) {
+    .billingform-container{
+        text-align: center;
+    }
+
+    .downloadreceiptbtn-wrapper{
+        text-align: center;
+    }
+}
+
+.downloadreceiptbtn{
+    background-color: #F6AE2D;
+    padding: 10px 15px;
+    border: none;
+    color: black;
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+    font-weight: 500;
+}
+
+.downloadreceiptbtn:hover{
+    background-color:#F8BD4F;
+}
+
+.receiptsuccessredirectbtn{
+    padding: 10px 15px;
+    background-color: #1F1F1F;
+    text-decoration: none;
+    color: white;
+    border-radius: 50px;
+}
+
+.receiptsuccessredirectbtn:hover{
+    background-color:#333333;
+}
+
+.text-red{
+    color: red;
+}
+
+.paymentdetailsbtn{
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color: #1F1F1F;
+    text-decoration: none;
+    color: white;
+    transition: background-color 0.2s ease-in;
+}
+
+.paymentdetailsbtn:hover{
+    background-color: #3c3c3c;
+}
+
+

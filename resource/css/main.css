@@ -1,0 +1,665 @@
+:root {
+    --normal-font: 'Poppins', sans-serif; /* Define a custom variable for the font */
+    --section-font: 'Nunito', sans-serif; /* Define a custom variable for the font */
+    --section-fonttwo: 'ZCOOL QingKe HuangYou', sans-serif;
+
+  }
+
+
+header {
+    font-family: var(--normal-font);
+    padding: 10px;
+}
+
+.navbar-brand img.logo {
+    margin: auto 10px;
+    width: 90px;
+    height: auto;
+    border-radius: 3px;
+}
+
+
+
+
+  .navbar-title h6{
+    font-size: 0.7rem;
+    font-weight: bold;
+    visibility: hidden;
+  }
+
+.navbar-nav .nav-item .nav-link {
+    font-weight: 500;
+    color: black;
+    font-size: 16px;
+    padding: 10px 15px;
+    transition: color 0.3s ease;
+    margin: auto 15px;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    color: green;
+}
+
+.register-btn{
+    text-decoration: none;
+    padding: 15px 18px;
+    border-radius: 50px;
+    background-color: #18B432;
+    color: white;
+    font-weight: 500;
+    margin: auto 10px;
+    transition: background-color 0.2s ease;
+
+}
+
+.register-btn:hover{
+    color: white !important;
+    background-color: #1BC537;
+}
+
+@media (max-width: 1024.5px) {
+
+    .navbar-nav {
+        text-align: center;
+        color: aliceblue;
+        margin-bottom: 20px;
+    }
+
+    .navbar-brand img.log{
+        width: 30px !important;
+    }
+
+    .navbar-nav .nav-item .nav-link {
+        margin: auto 5px;
+    }
+
+}
+
+
+@media (max-width: 769px) {
+    .navbar-nav .nav-item .nav-link {
+        margin: auto;
+        font-size: 0.7rem;
+    }
+
+    .register-btn{  
+        font-size: 0.7rem;
+    }
+
+
+
+
+}
+
+
+
+
+@media (max-width: 426px) {
+    header{
+        background-color: #FCBA04;
+    }
+
+    .navbar-brand img.logo {
+        width: 60px;
+    }
+
+    .navbar-title h6{
+        visibility: visible;
+      }
+
+      .navbar-nav .nav-item {
+        margin: 10px 0;
+    }
+}
+
+
+@media (max-width: 376px) {
+    .navbar-title h6{
+        font-size: 0.59rem !important;
+      }
+
+      .navbar-nav .nav-item {
+        margin: 10px 0;
+    }
+}
+
+
+
+/* Registration and Login Form CSS */
+#registerSection, #loginSection {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#registerSection.fade-in, #loginSection.fade-in {
+    opacity: 1;
+}
+
+
+
+
+.sidebar .container-fluid {
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.sidebar.fade-in .container-fluid {
+    opacity: 1;
+}
+
+
+/* Sidebar */
+.sidebar {
+    font-family: var(--normal-font);
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    background-color: white;
+    overflow-x: hidden;
+    transition: 0.5s;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Close button */
+.close-btn {
+    font-size: 2rem;
+    color: black;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    opacity: 1;
+}
+
+.close-btn:hover {
+    color: #1F1F1F;
+}
+
+.sidebar .container-fluid {
+    padding-top: 60px;
+}
+
+
+#registrationForm label{
+    font-size: 0.9rem;
+}
+
+
+#registrationForm input{
+    font-size: 0.8rem;
+}
+
+#registrationForm select{
+    font-size: 0.8rem;
+}
+
+.loginredirection span{
+    font-size: 0.7rem;
+    color: darkgrey;
+}
+
+.loginredirection a{
+    color: #18B432 !important;
+}
+
+
+#loginForm label{
+    font-size: 0.9rem;
+}
+
+
+#loginForm input{
+    font-size: 0.8rem;
+}
+
+
+
+
+
+
+.registerbtn {
+    border: none;
+    background-color: #1F1F1F;
+    color: white;
+    padding: 13px 20px;
+    border-radius: 50px;
+}
+
+.registerbtn:disabled {
+    background-color: #cccccc; /* Light grey background for disabled state */
+    color: #666666; /* Darker grey text color for disabled state */
+    opacity: 0.6; /* Lower opacity for disabled state */
+}
+
+.registerbtn:disabled:hover {
+    background-color: #cccccc; /* Light grey background for disabled state */
+    color: #666666; /* Darker grey text color for disabled state */
+    opacity: 0.6; /* Lower opacity for disabled state */
+}
+
+.registerbtn:not(:disabled):hover{
+    background-color: #333333;
+}
+
+
+.loginbtn{
+    border: none;
+    background-color: #1F1F1F;
+    color: white;
+    padding: 13px 20px;
+    border-radius: 50px;
+    transition: opacity 0.5s ease; /* Transition property */
+}
+
+
+.loginbtn:disabled {
+    background-color: #cccccc; /* Light grey background for disabled state */
+    color: #666666; /* Darker grey text color for disabled state */
+    opacity: 0.6; /* Lower opacity for disabled state */
+}
+
+.loginbtn:disabled:hover {
+    background-color: #cccccc; /* Light grey background for disabled state */
+    color: #666666; /* Darker grey text color for disabled state */
+    opacity: 0.6; /* Lower opacity for disabled state */
+}
+
+.loginbtn:not(:disabled):hover{
+    background-color: #333333;
+}
+
+
+.wizardformstep2{
+    display: none;
+    opacity: 0;
+}
+
+.redirectbackbtn-wrapper{
+    cursor: pointer;
+    display: inline-block;
+}
+
+.redirectbackbtn-wrapper .circle{
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.2s ease;
+}
+
+.redirectbackbtn-wrapper .circle:hover{
+    background-color: #ccc;
+}
+
+.redirectbackbtn-wrapper .circle img{
+    height: auto;
+    width: 25px;
+    transition: transform 0.3s ease;
+}
+
+
+.redirectbackbtn-wrapper:hover .circle img {
+    transform: translateX(-3px);
+  }
+
+
+/* Overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1; /* Below the sidebar */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s, visibility 0.5s;
+}
+.overlay.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.sectionone-wrapper{
+    padding-bottom: 7rem;
+    font-family: var(--section-font);
+}
+
+.maintitle{
+    text-align: left;
+    padding-top: 4rem;
+}
+
+.maintitle h1{
+    font-weight: bold;
+    font-size: clamp(2rem, 1vw + 1.5rem, 4rem);
+    padding: 4px;
+}
+
+.maintitle p{
+    font-size: clamp(1rem, 0.5vw + 0.7rem, 3rem);
+    font-weight: 500;
+    padding: 4px;
+}
+
+.mainimagesectionone{
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+@media (max-width: 426px) {
+    .maintitle{
+        text-align: center;
+    }
+}
+
+.mainpage-sectiontwo{
+    background: linear-gradient(to right, #FFFFFF, #DCDDE5);
+    
+}
+
+.sectiontwo-wrapper{
+    padding-bottom: 7rem;
+    font-family: var(--section-font);
+    justify-content: center;
+}
+
+
+.sectiontwoimg{
+    max-width: 100%;
+    height: auto;
+}
+
+.program-wrapper h3{
+    font-size: clamp(1.5rem, 1vw + 1rem, 3rem);
+}
+
+.program-wrapper p{
+    font-size: clamp(1rem, 0.5vw + 0.6rem, 3rem);
+}
+
+
+footer{
+    font-family: var(--section-fonttwo);
+    background: linear-gradient(109.6deg, rgba(0, 0, 0, 0.93) 11.2%, rgb(63, 61, 61) 78.9%);
+    color: white;
+}
+
+.footer-title h1{
+    font-size: clamp(2rem, 1vw + 1.4rem, 3rem);
+}
+
+.footer-title h5{
+    font-size: clamp(1rem, 1vw + 0.4rem, 2rem);
+}
+
+
+.socialmedia-wrapper{
+    text-align: center;
+}
+
+.socialmedia-wrapper img{
+    margin: auto 5px;
+}
+
+
+
+
+
+
+.news {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    width: auto;
+    transition: transform 0.3s;
+    display:flex;
+}
+.news:hover {
+    transform: translateY(-5px);
+}
+.activity {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 10px;
+    width: auto;
+    transition: transform 0.3s;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+.activity:hover {
+    transform: translateY(-5px);
+}
+
+.title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.date {
+    font-size: 0.9em;
+    color: #888;
+    margin-bottom: 15px;
+}
+
+.content {
+    font-size: 1em;
+    color: #555;
+}
+.banner{
+    height:250px;
+    display:inline-block;
+}
+.banner-pic{
+    max-width:150px;
+    height:auto;
+    display:block;
+}
+.banner-act{
+    max-width:200px;
+    height:auto;
+    display:block;
+}
+.details{
+    display:inline-block;
+}
+.contain {
+    flex-wrap: wrap;            
+    margin: 20px;
+}
+.save-button button {
+    padding: 10px 40px;
+    border: 1px solid black;
+    background-color: white;
+    color: black;
+    font-weight:bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in;
+}
+
+.save-button button:hover {
+    background-color: #45a049;
+    font-weight:none;
+}
+.save-button {
+    display: flex;
+    justify-content: flex-end;
+}
+.card-link {
+    text-decoration: none; /* Remove underline from links */
+    color:black;
+}
+.activity-container {
+    max-height: 816px; /* Set your desired height here */
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding-right: 10px; /* Add padding to avoid cutting off content */
+}
+
+/* Optional: Style the scrollbar (works in WebKit browsers like Chrome and Safari) */
+.activity-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.activity-container::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+.news-container {
+    max-height: 816px; /* Set your desired height here */
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding-left: 10px; /* Add padding to avoid cutting off content */
+    direction: rtl; /* Move the scrollbar to the left */
+}
+
+.news-container * {
+    direction: ltr; /* Reset text direction to left-to-right */
+    text-align: left; /* Ensure text alignment is left */
+}
+/* Optional: Style the scrollbar (works in WebKit browsers like Chrome and Safari) */
+.news-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.news-container::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+/* non-member redirect button */
+
+.redirectbackbtn-wrapper{
+    cursor: pointer;
+    display: inline-block;
+}
+
+.redirectbackbtn-wrapper .circle{
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.2s ease;
+}
+
+.redirectbackbtn-wrapper .circle:hover{
+    background-color: #ccc;
+}
+
+
+
+.redirectbackbtn-wrapper .circle img{
+    height: auto;
+    width: 25px;
+    transition: transform 0.3s ease;
+}
+
+
+.redirectbackbtn-wrapper:hover .circle img {
+    transform: translateX(-3px);
+  }
+
+
+  .registeractiveeventbtn{
+    border: none;
+    background-color: #1F1F1F;
+    color: white;
+    padding: 13px 20px;
+    border-radius: 50px;
+    transition: background-color 0.2s ease-in;
+    font-weight: 500;
+}
+
+.registeractiveeventbtn:hover{
+    background-color: #292929;
+}
+
+
+.eventbannerinfo-wrapper{
+    object-fit: cover;
+    width: 100%;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+    background-color: #cccccc;
+    overflow: hidden;
+    border-radius: 8px;
+    border: 2px solid #ccc;
+}
+
+.eventbannerinfo-wrapper img{
+    width: 100%;
+}
+
+
+.billingform-container{
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0.1, 0.1);
+    
+}
+
+.billingform-container h1{
+    font-family: var(--sidebar-title-font);
+}
+
+.billingform-container span{
+    font-family: var(--sidebar-navigation-font);
+    color: #999999;
+}
+
+.downloadreceiptbtn-wrapper{
+    text-align: end;
+}
+
+@media (max-width: 1030px) {
+    .billingform-container{
+        text-align: center;
+    }
+
+    .downloadreceiptbtn-wrapper{
+        text-align: center;
+    }
+}
+
+.downloadreceiptbtn{
+    background-color: #F6AE2D;
+    padding: 10px 15px;
+    border: none;
+    color: black;
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+    font-weight: 500;
+}
+
+.downloadreceiptbtn:hover{
+    background-color:#F8BD4F;
+}
+
+.receiptsuccessredirectbtn{
+    padding: 10px 15px;
+    background-color: #1F1F1F;
+    text-decoration: none;
+    color: white;
+    border-radius: 50px;
+}
+
+.receiptsuccessredirectbtn:hover{
+    background-color:#333333;
+}
+
+
+.text-red{
+    color: red;
+}

@@ -1,0 +1,33 @@
+2024-07-17 17:34:13: Success: Merit allocated for user undefined in event Tech Summit
+2024-07-17 17:34:48: Error: Merit already allocated for user undefined in event Tech Summit
+2024-07-17 17:34:51: Error: Merit already allocated for user undefined in event Tech Summit
+2024-07-17 17:34:55: Error: Merit already allocated for user undefined in event Tech Summit
+2024-07-17 17:34:59: Error: Merit already allocated for user undefined in event Tech Summit
+2024-07-17 17:35:03: Error: Merit already allocated for user undefined in event Tech Summit
+2024-07-17 17:36:40: Error: No merit record found for the event Film Festival
+2024-07-17 17:37:01: Error: No merit record found for the event Film Festival
+2024-07-17 17:37:12: Error: No merit record found for the event Film Festival
+2024-07-17 17:40:02: Success: Merit allocated for user undefined in event Tech Summit
+2024-07-17 17:45:08: Error: Merit already allocated for user undefined in event Tech Summit
+2024-07-17 17:45:13: Error: Merit already allocated for user undefined in event Tech Summit
+2024-07-17 17:46:03: Success: Merit allocated for user undefined in event Health Expo
+2024-07-17 17:47:42: Error: Merit already allocated for user undefined in event Health Expo
+2024-07-17 17:52:38: Success: Merit allocated for user 25 in event Health Expo
+2024-07-17 17:53:23: Success: Merit allocated for user 2 in event Tech Summit
+2024-07-17 18:28:25: Success: Merit allocated for user 9 in event Music Concert
+2024-07-17 18:28:42: Success: Merit allocated for user 9 in event Art Festival
+2024-07-17 18:29:26: Error: Merit already allocated for user 2 in event Tech Summit
+2024-07-17 18:29:26: Success: Merit allocated for user 9 in event Tech Summit
+2024-07-17 18:37:18: Error: Merit already allocated for user 2 in event Tech Summit
+2024-07-17 18:37:18: Error: Merit already allocated for user 9 in event Tech Summit
+2024-07-17 18:37:23: Error: Merit already allocated for user 2 in event Tech Summit
+2024-07-17 18:37:23: Error: Merit already allocated for user 9 in event Tech Summit
+2024-07-17 18:14:24: Success: Merit allocated for user 25 in event Tech Summit Corp
+2024-07-18 06:03:33: Error: Merit already allocated for user 2 in event Tech Summit Corp
+2024-07-18 06:03:33: Error: Merit already allocated for user 3 in event Tech Summit Corp
+2024-07-18 06:03:33: Error: Merit already allocated for user 9 in event Tech Summit Corp
+2024-07-18 06:03:33: Error: Merit already allocated for user 5 in event Tech Summit Corp
+2024-07-18 06:03:33: Success: Merit allocated for user 22 in event Tech Summit Corp
+2024-07-18 06:03:33: Error: Merit already allocated for user 25 in event Tech Summit Corp
+2024-07-18 06:03:49: Error: Merit already allocated for user 9 in event Music Concert
+2024-07-18 06:03:49: Success: Merit allocated for user 29 in event Music Concert
